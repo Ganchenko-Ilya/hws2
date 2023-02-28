@@ -1,18 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+  }
 .sendForm {
-
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .textarea {
-
+  background-color: #f5f7fb;
+  width: 85%;
+  outline: none;
+  resize: none;
+ display: inline-block;
+  
+  border-style: none;
+  border-radius: 20px;
+padding:12px 0 13px;
+height: 40px;
+  font-size: 14px;
+  padding-left: 20px;
 }
 
 .button {
-
+    padding:10px 40px ;
+    background-color: transparent;
+    border:none;
+    background-color: #0066CC;
+    border-radius: 20px;
+    color:#fff;
+    cursor: pointer;
+    
 }
 
 .button:hover {
-
 }
 .button:active {
-
 }
