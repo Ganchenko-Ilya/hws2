@@ -10,7 +10,7 @@ export const PATH = {
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
 }
-console.log(`/*${PATH.PRE_JUNIOR}`)
+
 
 function Pages() {
     return (
