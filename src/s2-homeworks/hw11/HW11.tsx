@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import s from './HW11.module.css'
 import s2 from '../../s1-main/App.module.css'
 import { restoreState } from '../hw06/localStorage/localStorage'
@@ -12,12 +12,50 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 
 function HW11() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужные числа, чтоб увидеть как они отображаются
-    const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
+    const [value1, setValue1] = useState(restoreState<number>('hw11-value1',0))
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
+console.log(value1,value2);
 
-    const change = (event: any, value: any) => {
+    const change = (event: Event, value: number | number[]) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
+    //    console.log(value);
+    //    debugger
+            if(Array.isArray(value) ){
+             
+               
+
+                    setValue1( value[0])
+                    setValue2(value[1])
+
+                
+                
+                
+    
+            }
+            else {
+                if(value > value2){
+                    setValue1(values =>   value2 )
+
+                }
+                else{
+                    setValue1(value)
+                }
+                
+            }
+
+        
+        
+        
+
+        
+       
+        
+        
+
+
+
     }
+    
 
     return (
         <div id={'hw11'}>
@@ -30,6 +68,10 @@ function HW11() {
                         <SuperRange
                             id={'hw11-single-slider'}
                             // сделать так чтоб value1 изменялось // пишет студент
+                            value={value1  }
+                            onChange={change}
+
+                            
 
                         />
                     </div>
@@ -38,6 +80,10 @@ function HW11() {
                         <SuperRange
                             id={'hw11-double-slider'}
                             // сделать так чтоб value1/2 изменялось // пишет студент
+                            value={[value1,value2]}
+                            onChange={change}
+                           
+
 
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
