@@ -1,16 +1,30 @@
 .buttonsContainer {
+    display: flex;
+    width:700px;
+    justify-content: space-between;
 }
 
 .responseContainer {
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    width:1200px;
 }
 
 .imageContainer {
+    
 }
 
 .image {
 }
 
 .textContainer{
+    font-size: 15px;
+    font-weight: 600;
+    width:500px;
 }
 
 .code {
@@ -19,4 +33,5 @@
 .text {
 }
 .info {
+    
 }
